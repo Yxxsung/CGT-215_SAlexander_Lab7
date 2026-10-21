@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37614.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGT 215_SAlexander_Lab7", "CGT 215_SAlexander_Lab7\CGT 215_SAlexander_Lab7.vcxproj", "{23B28AFA-E1A4-4F22-92F7-06BF119E6319}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Debug|x64.ActiveCfg = Debug|x64
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Debug|x64.Build.0 = Debug|x64
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Debug|x86.ActiveCfg = Debug|Win32
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Debug|x86.Build.0 = Debug|Win32
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Release|x64.ActiveCfg = Release|x64
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Release|x64.Build.0 = Release|x64
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Release|x86.ActiveCfg = Release|Win32
+		{23B28AFA-E1A4-4F22-92F7-06BF119E6319}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F11E492C-ADDE-4BB2-954F-61C05392D813}
+	EndGlobalSection
+EndGlobal
