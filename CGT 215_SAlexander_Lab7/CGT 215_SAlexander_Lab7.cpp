@@ -13,7 +13,7 @@ using namespace sf;
 using namespace sfp;
 
 //declare common variables here to make changing them later easier
-int wallW = 590;
+int wallW = 625;
 int wallH = 30;
 
 int main()
@@ -38,20 +38,20 @@ int main()
 	//sets the size of the floor in length and height)
 	floor.setSize(Vector2f(wallW, wallH));
 	//sets where the floor STARTS not the center of it!
-	floor.setCenter(Vector2f(150, 575));
+	floor.setCenter(Vector2f(90, 575));
 	//makes the floor static so it doesnt move
 	floor.setStatic(true);
 	//adds the floor to the world as an entity that has physics
 	world.AddPhysicsBody(floor);
-	//sets the thud (hit) count to 0 to start
-	int thudCount(0);
+	//sets the thud (hit) count to 1 to start
+	int thudCount(1);
 
 	// Create the left Wall
 	PhysicsRectangle LWall;
 	//sets the size of the left wall in length and height)
 	LWall.setSize(Vector2f(wallH, wallW));
 	//sets where the left wall STARTS not the center of it!
-	LWall.setCenter(Vector2f(140, 200));
+	LWall.setCenter(Vector2f(90, 120));
 	//makes the left wall static so it doesnt move
 	LWall.setStatic(true);
 	//adds the left wall to the world as an entity that has physics
@@ -62,7 +62,7 @@ int main()
 	//sets the size of the left wall in length and height)
 	RWall.setSize(Vector2f(wallH, wallW));
 	//sets where the left wall STARTS not the center of it!
-	RWall.setCenter(Vector2f(740, 200));
+	RWall.setCenter(Vector2f(690, 120));
 	//makes the left wall static so it doesnt move
 	RWall.setStatic(true);
 	//adds the left wall to the world as an entity that has physics
