@@ -51,7 +51,7 @@ int main()
 	//sets the size of the left wall in length and height)
 	LWall.setSize(Vector2f(wallH, wallW));
 	//sets where the left wall STARTS not the center of it!
-	LWall.setCenter(Vector2f(90, 120));
+	LWall.setCenter(Vector2f(90, 80));
 	//makes the left wall static so it doesnt move
 	LWall.setStatic(true);
 	//adds the left wall to the world as an entity that has physics
@@ -62,11 +62,22 @@ int main()
 	//sets the size of the left wall in length and height)
 	RWall.setSize(Vector2f(wallH, wallW));
 	//sets where the left wall STARTS not the center of it!
-	RWall.setCenter(Vector2f(690, 120));
+	RWall.setCenter(Vector2f(690, 80));
 	//makes the left wall static so it doesnt move
 	RWall.setStatic(true);
 	//adds the left wall to the world as an entity that has physics
 	world.AddPhysicsBody(RWall);
+
+	// Create the roof
+	PhysicsRectangle roof;
+	//sets the size of the floor in length and height)
+	roof.setSize(Vector2f(wallW, wallH));
+	//sets where the floor STARTS not the center of it!
+	roof.setCenter(Vector2f(90, 80));
+	//makes the floor static so it doesnt move
+	roof.setStatic(true);
+	//adds the floor to the world as an entity that has physics
+	world.AddPhysicsBody(roof);
 
 	//when the ball hits the floor, increase the thud count by 1.
 	floor.onCollision = [&thudCount](PhysicsBodyCollisionResult result) {
@@ -95,6 +106,7 @@ int main()
 		window.draw(floor);
 		window.draw(LWall);
 		window.draw(RWall);
+		window.draw(roof);
 		window.display();
 	}
 }
