@@ -27,7 +27,7 @@ int main()
 	PhysicsCircle ball;
 	
 	//sets the center of the ball and starting location
-	ball.setCenter(Vector2f(400, 300));
+	ball.setCenter(Vector2f(400, 365));
 	//sets radius and therefore size (d = 40)
 	ball.setRadius(20);
 	//adds the ball to the world as an entity that has physics
@@ -84,7 +84,7 @@ int main()
 	//sets the size of the center in length and height)
 	center.setSize(Vector2f(100, 30));
 	//sets where the center STARTS not the center of it!
-	center.setCenter(Vector2f(90, 80));
+	center.setCenter(Vector2f(350, 300));
 	//makes the center static so it doesnt move
 	center.setStatic(true);
 	//adds the center to the world as an entity that has physics
