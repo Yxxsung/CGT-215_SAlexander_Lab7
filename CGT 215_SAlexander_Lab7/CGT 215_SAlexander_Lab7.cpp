@@ -13,7 +13,7 @@ using namespace sf;
 using namespace sfp;
 
 //declare common variables here to make changing them later easier
-int wallW = 500;
+int wallW = 590;
 int wallH = 30;
 
 int main()
@@ -38,7 +38,7 @@ int main()
 	//sets the size of the floor in length and height)
 	floor.setSize(Vector2f(wallW, wallH));
 	//sets where the floor STARTS not the center of it!
-	floor.setCenter(Vector2f(200, 590));
+	floor.setCenter(Vector2f(150, 575));
 	//makes the floor static so it doesnt move
 	floor.setStatic(true);
 	//adds the floor to the world as an entity that has physics
@@ -51,11 +51,22 @@ int main()
 	//sets the size of the left wall in length and height)
 	LWall.setSize(Vector2f(wallH, wallW));
 	//sets where the left wall STARTS not the center of it!
-	LWall.setCenter(Vector2f(200, 590));
+	LWall.setCenter(Vector2f(140, 200));
 	//makes the left wall static so it doesnt move
 	LWall.setStatic(true);
 	//adds the left wall to the world as an entity that has physics
 	world.AddPhysicsBody(LWall);
+
+	// Create the right Wall
+	PhysicsRectangle RWall;
+	//sets the size of the left wall in length and height)
+	RWall.setSize(Vector2f(wallH, wallW));
+	//sets where the left wall STARTS not the center of it!
+	RWall.setCenter(Vector2f(740, 200));
+	//makes the left wall static so it doesnt move
+	RWall.setStatic(true);
+	//adds the left wall to the world as an entity that has physics
+	world.AddPhysicsBody(RWall);
 
 	//when the ball hits the floor, increase the thud count by 1.
 	floor.onCollision = [&thudCount](PhysicsBodyCollisionResult result) {
@@ -83,6 +94,7 @@ int main()
 		window.draw(ball);
 		window.draw(floor);
 		window.draw(LWall);
+		window.draw(RWall);
 		window.display();
 	}
 }
