@@ -48,7 +48,7 @@ int main()
 	// Create the left Wall
 	PhysicsRectangle LWall;
 	//sets the size of the left wall in length and height)
-	LWall.setSize(Vector2f(wallWidth, wallHeight));
+	LWall.setSize(Vector2f(wallHeight, wallWidth));
 	//sets where the left wall STARTS not the center of it!
 	LWall.setCenter(Vector2f(200, 590));
 	//makes the left wall static so it doesnt move
