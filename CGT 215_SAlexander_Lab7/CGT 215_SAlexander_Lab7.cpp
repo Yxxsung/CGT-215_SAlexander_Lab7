@@ -12,8 +12,8 @@ using namespace sf;
 using namespace sfp;
 
 //declare common variables here to make changing them later easier
-int wallWidth = 500;
-int wallHeight = 30;
+int wallW = 500;
+int wallH = 30;
 
 int main()
 {
@@ -35,7 +35,7 @@ int main()
 	// Create the floor
 	PhysicsRectangle floor;
 	//sets the size of the floor in length and height)
-	floor.setSize(Vector2f(wallWidth, wallHeight));
+	floor.setSize(Vector2f(wallW, wallH));
 	//sets where the floor STARTS not the center of it!
 	floor.setCenter(Vector2f(200, 590));
 	//makes the floor static so it doesnt move
@@ -48,7 +48,7 @@ int main()
 	// Create the left Wall
 	PhysicsRectangle LWall;
 	//sets the size of the left wall in length and height)
-	LWall.setSize(Vector2f(wallHeight, wallWidth));
+	LWall.setSize(Vector2f(wallW, wallH));
 	//sets where the left wall STARTS not the center of it!
 	LWall.setCenter(Vector2f(200, 590));
 	//makes the left wall static so it doesnt move
