@@ -106,8 +106,8 @@ int main()
 	Clock clock;
 	Time lastTime(clock.getElapsedTime()); //keeps track of how long the program is running
 
-	//this is the main game loop
-	while (true) {
+	//this is the main game loop (added the second parameter that makes game end on third bang
+	while (true && bangCount < 4) {
 		// calculate Mili-Seconds since last frame
 		Time currentTime(clock.getElapsedTime()); //gets the time thats passed since program start
 		Time deltaTime(currentTime - lastTime); //subtracts time since start from time running
