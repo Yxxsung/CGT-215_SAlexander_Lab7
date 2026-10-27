@@ -89,11 +89,18 @@ int main()
 	center.setStatic(true);
 	//adds the center to the world as an entity that has physics
 	world.AddPhysicsBody(center);
+	int bangCount(1);
 
-	//when the ball hits the floor, increase the thud count by 1.
+	//when the ball hits the floor, print 'thud' and increase the thud count by 1.
 	floor.onCollision = [&thudCount](PhysicsBodyCollisionResult result) {
 		cout << "thud " << thudCount << endl;
 		thudCount++;
+		};
+
+	//when the ball hits the center block, print 'bang' and increase bang count by 1
+	center.onCollision = [&bangCount](PhysicsBodyCollisionResult result) {
+		cout << "bang " << bangCount << endl;
+		bangCount++;
 		};
 
 	Clock clock;
