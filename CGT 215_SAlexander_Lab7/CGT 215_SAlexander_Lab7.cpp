@@ -59,25 +59,36 @@ int main()
 
 	// Create the right Wall
 	PhysicsRectangle RWall;
-	//sets the size of the left wall in length and height)
+	//sets the size of the right wall in length and height)
 	RWall.setSize(Vector2f(wallH, wallW));
-	//sets where the left wall STARTS not the center of it!
+	//sets where the right wall STARTS not the center of it!
 	RWall.setCenter(Vector2f(690, 80));
-	//makes the left wall static so it doesnt move
+	//makes the right wall static so it doesnt move
 	RWall.setStatic(true);
-	//adds the left wall to the world as an entity that has physics
+	//adds the right wall to the world as an entity that has physics
 	world.AddPhysicsBody(RWall);
 
 	// Create the roof
 	PhysicsRectangle roof;
-	//sets the size of the floor in length and height)
+	//sets the size of the roof in length and height)
 	roof.setSize(Vector2f(wallW, wallH));
-	//sets where the floor STARTS not the center of it!
+	//sets where the roof STARTS not the center of it!
 	roof.setCenter(Vector2f(90, 80));
-	//makes the floor static so it doesnt move
+	//makes the roof static so it doesnt move
 	roof.setStatic(true);
-	//adds the floor to the world as an entity that has physics
+	//adds the roof to the world as an entity that has physics
 	world.AddPhysicsBody(roof);
+
+	// Create the center
+	PhysicsRectangle center;
+	//sets the size of the center in length and height)
+	center.setSize(Vector2f(100, 30));
+	//sets where the center STARTS not the center of it!
+	center.setCenter(Vector2f(90, 80));
+	//makes the center static so it doesnt move
+	center.setStatic(true);
+	//adds the center to the world as an entity that has physics
+	world.AddPhysicsBody(center);
 
 	//when the ball hits the floor, increase the thud count by 1.
 	floor.onCollision = [&thudCount](PhysicsBodyCollisionResult result) {
@@ -107,6 +118,7 @@ int main()
 		window.draw(LWall);
 		window.draw(RWall);
 		window.draw(roof);
+		window.draw(center);
 		window.display();
 	}
 }
