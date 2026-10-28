@@ -26,7 +26,6 @@ int main()
 
 	// Create the ball
 	PhysicsCircle ball;
-	
 	//sets the center of the ball and starting location
 	ball.setCenter(Vector2f(400, 365));
 	//sets radius and therefore size (d = 40)
@@ -36,7 +35,7 @@ int main()
 	//sets the initial velocity of the ball according to prof Kesselman.
 	//made the ball suddenly go through the floor?? Wtf??
 	//OK for some reason SETTING THE VELOCITY IN GENERAL makes the ball go through the floor -_-
-	//ball.applyImpulse(Vector2f(.3,.3)); //commented bc ^
+	ball.applyImpulse(Vector2f(1,.1)); //commented bc ^
 
 	// Create the floor
 	PhysicsRectangle floor;
