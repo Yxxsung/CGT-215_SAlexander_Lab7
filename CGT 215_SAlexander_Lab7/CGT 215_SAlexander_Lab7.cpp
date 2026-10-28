@@ -15,6 +15,7 @@ using namespace sfp;
 //declare common variables here to make changing them later easier
 int wallW = 625;
 int wallH = 30;
+float Velo = 0.3;
 
 int main()
 {
@@ -32,6 +33,10 @@ int main()
 	ball.setRadius(20);
 	//adds the ball to the world as an entity that has physics
 	world.AddPhysicsBody(ball);
+	//sets the initial velocity of the ball according to prof Kesselman.
+	//made the ball suddenly go through the floor?? Wtf??
+	//OK for some reason SETTING THE VELOCITY IN GENERAL makes the ball go through the floor -_-
+	//ball.applyImpulse(Vector2f(.3,.3)); //commented bc ^
 
 	// Create the floor
 	PhysicsRectangle floor;
