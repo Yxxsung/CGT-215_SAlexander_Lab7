@@ -32,10 +32,19 @@ int main()
 	ball.setRadius(20);
 	//adds the ball to the world as an entity that has physics
 	world.AddPhysicsBody(ball);
+
+
+
 	//sets the initial velocity of the ball according to prof Kesselman.
 	//made the ball suddenly go through the floor?? Wtf??
 	//OK for some reason SETTING THE VELOCITY IN GENERAL makes the ball go through the floor -_-
-	ball.applyImpulse(Vector2f(1,.1)); //commented bc ^
+	ball.applyImpulse(Vector2f(.01, .01)); //commented bc ^
+	//ok, so looking further into it it says that the impulse is being applied every frame
+	//and that is why its phasing through the wall- so I need to find a way that makes it apply it
+	//only once, then it should work fine.
+
+
+
 
 	// Create the floor
 	PhysicsRectangle floor;
@@ -109,6 +118,7 @@ int main()
 
 	Clock clock;
 	Time lastTime(clock.getElapsedTime()); //keeps track of how long the program is running
+
 
 	//this is the main game loop (added the second parameter that makes game end on third bang
 	while (true && bangCount < 4) {
